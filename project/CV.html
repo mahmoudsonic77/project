@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <title>نموذج تقديم طلب التوظيف</title>
+  <link rel="stylesheet" href="CV.css">
+</head>
+
+<body>
+  <div class="form-container">
+    <img onclick="location.href='index.html'" src="img/ash-2.svg" class="logo">
+    <h1>بتدور على شغل؟ سجل الان </h1>
+
+
+
+    <form action="#" method="POST" enctype="multipart/form-data">
+
+      <div class="form-group">
+        <label for="photo">الصورة الشخصية :</label>
+        <div class="wrapper">
+          <div class="image-container">
+            <i class="fa fa-user"></i>
+            <img src="">
+          </div>
+          <label for="img_input" class="camera-icon">
+            <i class="fas fa-camera"></i>
+
+          </label>
+          <input type="file" id="img_input" accept="image/*" hidden>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="name">الاسم الأول :</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="surname">اسم العائلة :</label>
+        <input type="text" id="surname" name="surname" required>
+      </div>
+      <div class="form-group">
+        <label for="email">البريد الإلكتروني :</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">رقم الهاتف :</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="gender">الجنس :</label>
+        <select id="gender" name="gender" required>
+          <option value="">-- اختر الجنس --</option>
+          <option value="ذكر">ذكر</option>
+          <option value="أنثى">أنثى</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="religion">الديانة:</label>
+        <select id="religion" name="religion">
+          <option value="muslim">مسلم</option>
+          <option value="christian">مسيحي</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="birthdate">تاريخ الميلاد :</label>
+        <input type="date" id="birthdate" name="birthdate" required>
+      </div>
+
+      <div class="form-group">
+        <label for="governorate">المحافظة:</label>
+        <select id="governorate" name="governorate">
+          <option value="">اختر المحافظة الخاصة بك</option>
+          <option value="cairo">القاهرة</option>
+          <option value="alexandria">الإسكندرية</option>
+          <option value="giza">الجيزة</option>
+          <option value="aswan">أسوان</option>
+          <option value="asyut">أسيوط</option>
+          <option value="beheira">البحيرة</option>
+          <option value="beniSuef">بني سويف</option>
+          <option value="dakahlia">الدقهلية</option>
+          <option value="damietta">دمياط</option>
+          <option value="faiyum">الفيوم</option>
+          <option value="gharbia">الغربية</option>
+          <option value="ismailia">الإسماعيلية</option>
+          <option value="kafr-el-sheikh">كفر الشيخ</option>
+          <option value="luxor">الأقصر</option>
+          <option value="matrouh">مطروح</option>
+          <option value="minya">المنيا</option>
+          <option value="monufia">المنوفية</option>
+          <option value="new-valley">الوادي الجديد</option>
+          <option value="north-sinai">شمال سيناء</option>
+          <option value="port-said">بورسعيد</option>
+          <option value="qalyubia">القليوبية</option>
+          <option value="qena">قنا</option>
+          <option value="red-sea">البحر الأحمر</option>
+          <option value="sharqia">الشرقية</option>
+          <option value="sohag">سوهاج</option>
+          <option value="south-sinai">جنوب سيناء</option>
+          <option value="suez">السويس</option>
+          <!-- قائمة الخيارات الخاصة بالمحافظات الأخرى -->
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="area">المنطقة:</label>
+        <select id="area" name="area" disabled>
+          <option value="">يرجى اختيار المحافظة أولاً</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="address">العنوان:</label>
+        <input type="text" id="address" name="address" required>
+      </div>
+
+      <div class="form-group">
+        <label for="universityType">نوع الجامعة:</label>
+        <select id="universityType" name="universityType">
+          <option value="حكومية">حكومية</option>
+          <option value="أهلية">أهلية</option>
+          <option value="خاص">خاص</option>
+          <option value="أخرى">أخرى</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="education">الكلية/المعهد:</label>
+        <select id="education" name="education">
+          <option value="">اختر التعليم الخاص بك</option>
+          <optgroup label="الكليات">
+            <option value="engineering-computer">كلية الهندسة - قسم الحاسبات الآلية</option>
+            <option value="science-computer">كلية العلوم - قسم علوم الحاسب</option>
+            <option value="information-technology">كلية تكنولوجيا المعلومات</option>
+          </optgroup>
+          <optgroup label="المعاهد">
+            <option value="technical-computer">المعهد التقني - تخصص الحاسب الآلي</option>
+            <option value="technical-networking">المعهد التقني - تخصص الشبكات</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="major">الشعبة/التخصص:</label>
+        <select id="major" name="major">
+          <option value="computer-science">علوم الحاسوب</option>
+          <option value="information-technology">تكنولوجيا المعلومات</option>
+          <option value="software-engineering">هندسة البرمجيات</option>
+          <option value="computer-engineering">هندسة الحاسوب</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="education">المؤهل العلمي :</label>
+        <select id="education" name="education" required>
+          <option value="">-- اختر المؤهل العلمي --</option>
+          <option value="دبلوم">دبلوم</option>
+          <option value="بكالوريوس">بكالوريوس</option>
+          <option value="ماجستير">ماجستير</option>
+          <option value="دكتوراه">دكتوراه</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="military-service">الخدمة العسكرية:</label>
+        <select id="military-service" name="military-service">
+          <option value="أدى الخدمة العسكرية">أدى الخدمة العسكرية</option>
+          <option value="معفى من الخدمة العسكرية">معفى من الخدمة العسكرية</option>
+          <option value="فى الخدمة">فى الخدمة</option>
+          <option value="طالب">طالب</option>
+          <option value="اخرى">اخرى</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="social-status">الحالة الاجتماعية:</label>
+        <select id="social-status" name="social-status">
+          <option value="">اختر حالتك الاجتماعية</option>
+          <option value="single">أعزب/عزباء</option>
+          <option value="married">متزوج/متزوجة</option>
+          <option value="divorced">اخرى</option>
+        </select>
+      </div>
+
+      <p>المهارات :</p>
+      <label for="language">اختر اللغه التى تتقنها:</label>
+      <div class="form-group">
+        <input type="checkbox" id="english" name="language" value="english">
+        <label for="english">English</label>
+        <br>
+        <input type="checkbox" id="spanish" name="language" value="spanish">
+        <label for="spanish">Spanish</label>
+        <br>
+        <input type="checkbox" id="italian" name="language" value="italian">
+        <label for="italian">Italian</label>
+        <br>
+        <input type="checkbox" id="french" name="language" value="french">
+        <label for="french">French</label>
+        <br>
+        <input type="checkbox" id="german" name="language" value="german">
+        <label for="german">German</label>
+      </div>
+
+      <div class="skill">
+        <p>الكمبيوتر :</p>
+        <select name="computer">
+          <option value="">اختر مستواك فى الكمبيوتر</option>
+          <option value="1">ممتاز</option>
+          <option value="2">متوسط</option>
+          <option value="3">مقبول</option>
+          <option value="4">ضعيف</option>
+        </select>
+      </div>
+
+      <label>اختر البرامج التي تتقنها فى Microsoft Office:</label>
+      <div class="form-group">
+        <input type="checkbox" id="word" name="program[]" value="Word">
+        <label for="word">Word</label>
+        <br>
+        <input type="checkbox" id="excel" name="program[]" value="Excel">
+        <label for="excel">Excel</label>
+        <br>
+        <input type="checkbox" id="powerpoint" name="program[]" value="PowerPoint">
+        <label for="powerpoint">PowerPoint</label>
+        <br>
+        <input type="checkbox" id="outlook" name="program[]" value="Outlook">
+        <label for="outlook">Outlook</label>
+        <br>
+      </div>
+
+      <div class="form-group">
+        <label for="new-skill">أضف مهارة جديدة:</label>
+        <input type="text" id="new-skill" placeholder="اكتب اسم المهارة">
+        <button onclick="addSkill()"><i class="fa fa-plus"></i></button>
+        <br>
+        <ul id="skill-list"></ul>
+      </div>
+
+      <div class="form-group">
+        <label for="new-course">أضف دورة:</label>
+        <input type="text" id="new-course" placeholder="اكتب اسم الدورة">
+        <button onclick="addCourse()">إضافة</button>
+        <br>
+        <ul id="course-list"></ul>
+      </div>
+
+      <button type="submit">إرسال</button>
+
+    </form>
+  </div>
+
+
+
+  <script>
+
+    /***********************رفع الصوره الشخصيه***************************/
+    img_input = document.querySelector("#img_input");
+    img_input.onchange = function (e) {
+      if (e.target.files.length > 0) {
+        src = URL.createObjectURL(e.target.files[0]);
+        image = document.querySelector(".image-container img");
+        image.src = src;
+      }
+    }
+    /***********************رفع الصوره الشخصيه***************************/
+
+
+    /***********************محافطات مصر مع المناطق**************************/
+    // قائمة المناطق في القاهرة
+    var cairoAreas = [
+      "مصر الجديدة",
+      "مدينة نصر",
+      "المهندسين",
+      "الدقي",
+      "الجيزة",
+      "المعادي",
+      "التجمع الخامس",
+      "التجمع الأول",
+      "التجمع الثاني",
+      "التجمع الثالث"
+    ];
+
+    // قائمة المناطق في الإسكندرية
+    var alexandriaAreas = [
+      "العجمي",
+      "سموحة",
+      "المنتزه",
+      "المندرة",
+      "محرم بك",
+      "اللوران",
+      "أبو قير",
+      "الرمل",
+      "الشاطبي"
+    ];
+
+    // قائمة المناطق في الجيزة
+    var gizaAreas = [
+      "الهرم",
+      "المهندسين",
+      "الدقي",
+      "الجيزة الجديدة",
+      "العمرانية",
+      "6 أكتوبر",
+      "الشيخ زايد",
+      "البدرشين",
+      "الصف",
+      "العياط"
+    ];
+
+    // قائمة المناطق في أسوان
+    var aswanAreas = [
+      "أسوان الجديدة",
+      "كوم أمبو",
+      "دراو",
+      "نصر النوبة",
+      "إدفو",
+      "الرديسية",
+      "السباعية",
+      "الطويل",
+      "البصيلية"
+    ];
+
+    // المناطق في أسيوط
+    var asyutAreas = [
+      "أسيوط الجديدة",
+      "ديروط",
+      "منفلوط",
+      "القوصية",
+      "أبنوب",
+      "الغنايم",
+      "ساحل سليم",
+      "الفتح",
+      "البدارى"
+    ];
+
+    // المناطق في البحيرة
+    var beheiraAreas = [
+      "دمنهور",
+      "كفر الدوار",
+      "رشيد",
+      "إدكو",
+      "أبو المطامير",
+      "أبو حمص",
+      "شبراخيت",
+      "كوم حمادة",
+      "الدلنجات"
+    ];
+
+    // المناطق في بني سويف
+    var beniSuefAreas = [
+      "بني سويف الجديدة",
+      "ناصر",
+      "إهناسيا",
+      "الواسطى",
+      "ببا",
+      "سمسطا",
+      "الفشن",
+      "النصرية",
+      "بني يوسف",
+      "السهيلة"
+    ];
+
+    // تحديث قائمة المناطق عندما يتم تغيير المحافظة
+    document.getElementById("governorate").addEventListener("change", function () {
+      var areaSelect = document.getElementById("area");
+      areaSelect.innerHTML = "";
+      areaSelect.disabled = false;
+      var selectedGovernorate = this.value;
+      var areas = [];
+
+      switch (selectedGovernorate) {
+        case "cairo":
+          areas = cairoAreas;
+          break;
+        case "alexandria":
+          areas = alexandriaAreas;
+          break;
+        case "giza":
+          areas = gizaAreas;
+          break;
+        case "aswan":
+          areas = aswanAreas;
+          break;
+        case "asyut":
+          areas = asyutAreas;
+          break;
+        case "beheira":
+          areas = beheiraAreas;
+          break;
+        case "beniSuef":
+          areas = beniSuefAreas;
+          break;
+        // إضافة حالات switch الأخرى للمحافظات الأخرى
+      }
+
+      for (var i = 0; i < areas.length; i++) {
+        var areaOption = document.createElement("option");
+        areaOption.value = areas[i];
+        areaOption.text = areas[i];
+        areaSelect.appendChild(areaOption);
+      }
+    });
+    /***********************محافطات مصر مع المناطق**************************/
+
+    /*************اضافة مهاره جديده***************/
+    function addSkill() {
+      // Get the input value
+      var newSkill = document.getElementById("new-skill").value;
+
+      // Create a new list item
+      var li = document.createElement("li");
+      var text = document.createTextNode(newSkill);
+      li.appendChild(text);
+
+      // Add the new list item to the list
+      var skillList = document.getElementById("skill-list");
+      skillList.appendChild(li);
+
+      // Clear the input field
+      document.getElementById("new-skill").value = "";
+    }
+    /*************اضافة مهاره جديده***************/
+
+
+    function addCourse() {
+      // Get the input value
+      var newCourse = document.getElementById("new-course").value;
+
+      // Create a new tag element
+      var li = document.createElement("li");
+      var text = document.createTextNode(newCourse);
+      li.appendChild(text);
+
+      // Add the new tag element to the list
+      var courseList = document.getElementById("course-list");
+      courseList.appendChild(li);
+
+      // Clear the input field
+      document.getElementById("new-course").value = "";
+    }
+  </script>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
+
+</html>

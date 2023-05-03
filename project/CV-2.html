@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>السيره الذاتية للشركة</title>
+    <link rel="stylesheet" href="CV-2.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <img onclick="location.href='index.html'" src="img/ash-2.svg" class="logo">
+        <h1>بتدور على موظفين؟ سجل الأن</h1>
+
+        <form action="#" method="POST" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label for="photo">لوجو الشركة :</label>
+                <div class="wrapper">
+                    <div class="image-container">
+                        <i class="fa fa-user"></i>
+                        <img src="">
+                    </div>
+                    <label for="img_input" class="camera-icon">
+                        <i class="fas fa-camera"></i>
+
+                    </label>
+                    <input type="file" id="img_input" accept="image/*" hidden>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="Company-name">اسم الشركة :</label>
+                <input type="text" id="Company-name" name="Company-name" required>
+            </div>
+            <div class="form-group">
+                <label for="name">اسم المسئول :</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">البريد الإلكتروني :</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">رقم الهاتف :</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="job-title">مجال عمل الشركة :</label>
+                <input type="text" id="job-title" name="job-title" required>
+            </div>
+
+            <div class="form-group">
+                <label for="governorate">المحافظة (مقر الشركة):</label>
+                <select id="governorate" name="governorate">
+                    <option value="">اختر المحافظة الخاصة بك</option>
+                    <option value="cairo">القاهرة</option>
+                    <option value="alexandria">الإسكندرية</option>
+                    <option value="giza">الجيزة</option>
+                    <option value="aswan">أسوان</option>
+                    <option value="asyut">أسيوط</option>
+                    <option value="beheira">البحيرة</option>
+                    <option value="beniSuef">بني سويف</option>
+                    <option value="dakahlia">الدقهلية</option>
+                    <option value="damietta">دمياط</option>
+                    <option value="faiyum">الفيوم</option>
+                    <option value="gharbia">الغربية</option>
+                    <option value="ismailia">الإسماعيلية</option>
+                    <option value="kafr-el-sheikh">كفر الشيخ</option>
+                    <option value="luxor">الأقصر</option>
+                    <option value="matrouh">مطروح</option>
+                    <option value="minya">المنيا</option>
+                    <option value="monufia">المنوفية</option>
+                    <option value="new-valley">الوادي الجديد</option>
+                    <option value="north-sinai">شمال سيناء</option>
+                    <option value="port-said">بورسعيد</option>
+                    <option value="qalyubia">القليوبية</option>
+                    <option value="qena">قنا</option>
+                    <option value="red-sea">البحر الأحمر</option>
+                    <option value="sharqia">الشرقية</option>
+                    <option value="sohag">سوهاج</option>
+                    <option value="south-sinai">جنوب سيناء</option>
+                    <option value="suez">السويس</option>
+                    <!-- قائمة الخيارات الخاصة بالمحافظات الأخرى -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="area">المنطقة:</label>
+                <select id="area" name="area" disabled>
+                    <option value="">يرجى اختيار المحافظة أولاً</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="address">العنوان:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="commercial-register-file">صورة السجل التجاري:</label>
+                <input type="file" id="commercial-register-file" name="commercial-register-file" accept="image/*"
+                    required>
+
+                <img id="commercial-register-preview" src="#" alt="صورة السجل التجاري"
+                    style="display: none; max-width: 100px; max-height: 100px;">
+            </div>
+            <div class="form-group">
+                <label for="tax-card-file">صورة البطاقة الضريبية:</label>
+                <input type="file" id="tax-card-file" name="tax-card-file" accept="image/*" required>
+
+                <img id="tax-card-preview" src="#" alt="صورة البطاقة الضريبية"
+                    style="display: none; max-width: 100px; max-height: 100px;">
+            </div>
+            <button type="submit">إرسال</button>
+
+        </form>
+    </div>
+
+
+
+    <script>
+
+        /***********************رفع الصوره الشخصيه***************************/
+        img_input = document.querySelector("#img_input");
+        img_input.onchange = function (e) {
+            if (e.target.files.length > 0) {
+                src = URL.createObjectURL(e.target.files[0]);
+                image = document.querySelector(".image-container img");
+                image.src = src;
+            }
+        }
+        /***********************رفع الصوره الشخصيه***************************/
+
+
+        /***********************محافطات مصر مع المناطق**************************/
+        // قائمة المناطق في القاهرة
+        var cairoAreas = [
+            "مصر الجديدة",
+            "مدينة نصر",
+            "المهندسين",
+            "الدقي",
+            "الجيزة",
+            "المعادي",
+            "التجمع الخامس",
+            "التجمع الأول",
+            "التجمع الثاني",
+            "التجمع الثالث"
+        ];
+
+        // قائمة المناطق في الإسكندرية
+        var alexandriaAreas = [
+            "العجمي",
+            "سموحة",
+            "المنتزه",
+            "المندرة",
+            "محرم بك",
+            "اللوران",
+            "أبو قير",
+            "الرمل",
+            "الشاطبي"
+        ];
+
+        // قائمة المناطق في الجيزة
+        var gizaAreas = [
+            "الهرم",
+            "المهندسين",
+            "الدقي",
+            "الجيزة الجديدة",
+            "العمرانية",
+            "6 أكتوبر",
+            "الشيخ زايد",
+            "البدرشين",
+            "الصف",
+            "العياط"
+        ];
+
+        // قائمة المناطق في أسوان
+        var aswanAreas = [
+            "أسوان الجديدة",
+            "كوم أمبو",
+            "دراو",
+            "نصر النوبة",
+            "إدفو",
+            "الرديسية",
+            "السباعية",
+            "الطويل",
+            "البصيلية"
+        ];
+
+        // المناطق في أسيوط
+        var asyutAreas = [
+            "أسيوط الجديدة",
+            "ديروط",
+            "منفلوط",
+            "القوصية",
+            "أبنوب",
+            "الغنايم",
+            "ساحل سليم",
+            "الفتح",
+            "البدارى"
+        ];
+
+        // المناطق في البحيرة
+        var beheiraAreas = [
+            "دمنهور",
+            "كفر الدوار",
+            "رشيد",
+            "إدكو",
+            "أبو المطامير",
+            "أبو حمص",
+            "شبراخيت",
+            "كوم حمادة",
+            "الدلنجات"
+        ];
+
+        // المناطق في بني سويف
+        var beniSuefAreas = [
+            "بني سويف الجديدة",
+            "ناصر",
+            "إهناسيا",
+            "الواسطى",
+            "ببا",
+            "سمسطا",
+            "الفشن",
+            "النصرية",
+            "بني يوسف",
+            "السهيلة"
+        ];
+
+        // تحديث قائمة المناطق عندما يتم تغيير المحافظة
+        document.getElementById("governorate").addEventListener("change", function () {
+            var areaSelect = document.getElementById("area");
+            areaSelect.innerHTML = "";
+            areaSelect.disabled = false;
+            var selectedGovernorate = this.value;
+            var areas = [];
+
+            switch (selectedGovernorate) {
+                case "cairo":
+                    areas = cairoAreas;
+                    break;
+                case "alexandria":
+                    areas = alexandriaAreas;
+                    break;
+                case "giza":
+                    areas = gizaAreas;
+                    break;
+                case "aswan":
+                    areas = aswanAreas;
+                    break;
+                case "asyut":
+                    areas = asyutAreas;
+                    break;
+                case "beheira":
+                    areas = beheiraAreas;
+                    break;
+                case "beniSuef":
+                    areas = beniSuefAreas;
+                    break;
+                // إضافة حالات switch الأخرى للمحافظات الأخرى
+            }
+
+            for (var i = 0; i < areas.length; i++) {
+                var areaOption = document.createElement("option");
+                areaOption.value = areas[i];
+                areaOption.text = areas[i];
+                areaSelect.appendChild(areaOption);
+            }
+        });
+        /***********************محافطات مصر مع المناطق**************************/
+
+        /********** رفع صورة السجل التجاري و صوره البطاقه الضريبية*************/
+        function previewImage(event, previewElement) {
+            var reader = new FileReader();
+            reader.onload = function () {
+                previewElement.src = reader.result;
+                previewElement.style.display = "block";
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+
+        var commercialRegisterInput = document.getElementById("commercial-register-file");
+        var commercialRegisterPreview = document.getElementById("commercial-register-preview");
+        commercialRegisterInput.addEventListener("change", function (event) {
+            previewImage(event, commercialRegisterPreview);
+        });
+
+        var taxCardInput = document.getElementById("tax-card-file");
+        var taxCardPreview = document.getElementById("tax-card-preview");
+        taxCardInput.addEventListener("change", function (event) {
+            previewImage(event, taxCardPreview);
+        });
+        /********** رفع صورة السجل التجاري و صوره البطاقه الضريبية*************/
+
+    </script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
+
+</html>

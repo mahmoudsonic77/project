@@ -1,0 +1,367 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background-color: #f3f3f3;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background: linear-gradient(to right, #ff416c, #ff4b2b); */
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 150px;
+    cursor: pointer;
+
+}
+
+form {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 400px;
+
+
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    color: #444;
+}
+
+@keyframes example {
+    0% {
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+button[type="submit"] {
+    animation-name: example;
+    animation-duration: 1s;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: #fff;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.2s ease-in-out;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+}
+
+button[type="submit"]:hover {
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to right, #f7597e, #f5563a);
+}
+
+p {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+    color: #444;
+}
+
+.signup-link,
+.login-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.signup-link:hover,
+.login-link:hover {
+    text-decoration: underline;
+}
+
+.forgot-password a {
+    text-decoration: none;
+    color: #444;
+    float: left;
+}
+
+.forgot-password a:hover {
+    color: blue;
+}
+
+
+/* تنسيق الزر */
+button[type="submit"] {
+    width: 100%;
+    font-size: 18px;
+}
+
+
+
+
+@media (max-width: 500px) {
+    form {
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* تنسيق العناصر النمطية العامة
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f6f5f7;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-family: 'Cairo', sans-serif;
+    overflow: hidden;
+
+}
+
+التخصيص للعنصر الذي يحتوي على الزر الذي يتم النقر عليه لتسجيل الدخول و إنشاء الحساب
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    width: 50%;
+    height: 480px;
+    margin: 50px auto;
+}
+
+تعديل ستايلات نموذج تسجيل الدخول
+.form-container.sign-in-container,
+.form-container.sign-up-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .form-container.sign-in-container {
+    z-index: 1;
+    opacity: 1;
+  }
+  
+  .form-container.sign-up-container {
+    z-index: 2;
+    opacity: 0;
+  }
+  
+  .container.sign-up-mode .sign-in-container {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  
+  .container.sign-up-mode .sign-up-container {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+
+
+
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+}
+
+.overlay {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlay-panel {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+    transform: translateX(-20%);
+}
+
+.overlay-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+
+
+.sign-in-container form,
+.sign-up-container form {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0rem 5rem;
+    transition: opacity 0.6s ease-in-out;
+}
+
+input {
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+button {
+    border-radius: 20px;
+    border: none;
+    background-color: #ff4b2b;
+    color: #fff;
+    padding: 12px 0;
+    margin-top: 20px;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+تعديل ستايلات الزر
+.ghost {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 20px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.ghost:hover {
+    background-color: #fff;
+    color: #0d0d0d;
+}
+
+a {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+h1 {
+    font-weight: bold;
+    margin-top: 0;
+    color: #333;
+}
+
+p {
+    font-size: 0.8rem;
+    color: #777;
+    line-height: 1.2;
+    margin-top: 1rem;
+} */

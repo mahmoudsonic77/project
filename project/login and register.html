@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول وإنشاء حساب</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-kryvM8iR0FtJi+Y9A6TgV8mLw6UuV6hK3q4vV7WpC6mJi7XsNk+ZVxWZwNzZ1nJpC+UvPIliWJ2QzQHJX9ZcFw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!--login and sign up-->
+    <div class="container">
+        <form class="login-form" method="get" action="#">
+            <img onclick="location.href='index.html'" src="img/ash-1.svg" class="logo">
+            <h1>تسجيل الدخول</h1>
+            <div>
+                <input type="email" id="email" name="email" placeholder="البريد الإلكتروني" required>
+            </div>
+            <div>
+                <input type="password" id="password" name="password" placeholder="كلمة المرور" required>
+            </div>
+            <div class="forgot-password">
+                <a href="forgot-password.html">هل نسيت كلمة المرور؟</a>
+            </div>
+            <button type="submit">تسجيل الدخول</button>
+            <p>ليس لديك حساب؟ <a href="#" class="signup-link">أنشئ حسابًا</a></p>
+        </form>
+
+        <form class="signup-form" style="display: none;" method="post" action="#" >
+            <img onclick="location.href='index.html'" src="img/ash-1.png" class="logo">
+            <h1>إنشاء حساب</h1>
+            <div>
+                <input type="text" id="fullname" name="fullname" placeholder="الاسم الكامل" required>
+            </div>
+            <div>
+                <input type="email" id="email" name="email" placeholder="البريد الإلكتروني" required>
+            </div>
+            <div>
+                <input type="password" id="new-password" name="new-password" placeholder="كلمة المرور" required>
+            </div>
+            <div>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder=" تاكيد كلمة المرور " required>
+            </div>
+            <button type="submit">إنشاء الحساب</button>
+            <p>لديك حساب بالفعل؟ <a href="#" class="login-link">تسجيل الدخول</a></p>
+        </form>
+    </div>
+    <!--/login and sign up-->
+
+
+
+    <script>
+        // Show login form
+        document.querySelector('.login-link').addEventListener('click', function () {
+            document.querySelector('.signup-form').style.display = 'none';
+            document.querySelector('.login-form').style.display = 'block';
+        });
+
+        // Show signup form
+        document.querySelector('.signup-link').addEventListener('click', function () {
+            document.querySelector('.login-form').style.display = 'none';
+            document.querySelector('.signup-form').style.display = 'block';
+        });
+
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>تسجيل الدخول</h1>
+                <input type="email" id="email" name="email" placeholder="البريد الإلكتروني" required>
+                <input type="password" id="password" name="password" placeholder="كلمة المرور" required>
+                <a href="#">هل نسيت كلمة المرور?</a>
+                <button type="submit" id="signInBtn">تسجيل الدخول</button>
+            </form>
+        </div>
+
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Create Account</h1>
+                <input type="text" id="username" name="username" placeholder="اسم المستخدم" required>
+                <input type="email" id="email" name="email" placeholder="البريد الإلكتروني" required>
+                <input type="password" id="password" name="password" placeholder="كلمة المرور" required>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="تأكيد كلمة المرور"
+                    required>
+                <button type="submit" id="register-button">إنشاء حساب</button>
+            </form>
+        </div>
+
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const signIn = document.getElementById('signIn');
+    const signUp = document.getElementById('signUp');
+    const container = document.querySelector('.container');
+
+    signUp.addEventListener('click', () =>
+        container.classList.add('sign-up-mode')
+    );
+
+    signIn.addEventListener('click', () =>
+        container.classList.remove('sign-up-mode')
+    );
+</script>
+
+</html> -->

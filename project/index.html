@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>ashtaghil</title>
+</head>
+
+<body>
+
+    <!-- الهيدر -->
+    <header>
+        <div class="logo">
+            <img src="img/ash-2.svg" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <i class="fa-solid fa-xmark"></i>
+                <li><button id="Cv-btn">ادخل سيرتك الذاتية <i class="fas fa-file-alt"></i></button></li>
+                <li><button id="login-btn">تسجيل الدخول <i class="fas fa-sign-in-alt"></i></button></li>
+                <li><a href="#وظائف حسب المحافظات">وظائف حسب المحافظات <i class="fas fa-map-marker-alt"></i></a></li>
+                <li><a href="#وظائف حسب المجال">وظائف حسب المجال <i class="fas fa-briefcase"></i></a></li>
+                <li><a onclick="location.href='job-search.html'">اكتشف الوظائف <i class="fas fa-search"></i></a></li>
+                <li><a href="#الرئيسية">الرئيسية <i class="fas fa-home"></i></a></li>
+                <li><i class="fa-solid fa-user" onclick="toggleMenu()"></i></li>
+
+                <!-- profile -->
+                <div class="sub-menu-wrap" id="subMenu">
+                    <div class="sub-menu">
+                        <div class="user-info">
+                            <img src="img/user.svg">
+                            <h2>اسم المستخدم</h2>
+                        </div>
+                        <hr>
+                        <a href="#" class="sub-menu-link">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <p>تسجيل الخروج</p>
+                            <span><i class="fa-solid fa-angle-left"></i></span>
+                        </a>
+                    </div>
+
+                </div>
+                <!-- profile -->
+
+                <!-- ========= login/register and cv button ========= -->
+                <div id="login-menu">
+
+                    <ul>
+                        <li><a onclick="location.href='login and register.html'">كراغب للعمل</a></li>
+                        <li><a onclick="location.href='login and register.html'">كشركة</a></li>
+                    </ul>
+                </div>
+
+                <div id="Cv-menu">
+
+                    <ul>
+                        <li><a onclick="location.href='CV.html'">كراغب للعمل</a></li>
+                        <li><a onclick="location.href='CV-2.html'">كشركة</a></li>
+                    </ul>
+                </div>
+                <!-- ========= login/register and cv button ========= -->
+            </ul>
+        </nav>
+        <i class="fa-solid fa-bars"></i>
+    </header>
+    <!-- /الهيدر -->
+
+
+
+
+    <!-- الصفحه الرئيسية -->
+    <section class="main" id="الرئيسية">
+        <div>
+            <h2> هتلاقي وظيفتك في <span> اشتغل</span> ... أسرع موقع توظيف في مصر</h2>
+            <p> دور على الوظيفة اللي تناسبك بسرعة وسهولة في وظائف اشتغل مهما كان تخصصك</p>
+        </div>
+
+    </section>
+    <!-- /الصفحه الرئيسية -->
+
+
+    <!-- وظائف حسب المجال -->
+    <section class="cards" id="وظائف حسب المجال">
+        <h2 class="title">وظائف حسب المجال</h2>
+        <p class="para">هنا هتلاقي الوظائف المرتبطة بمجال شغلك وتخصصك</p>
+        <div class="content">
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-laptop-code "></i>
+                </div>
+                <div class="info">
+                    <h3>برمجة</h3>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-network-wired "></i>
+                </div>
+                <div class="info">
+                    <h3>حاسبات وشبكات
+                    </h3>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-sharp fa-solid fa-gears "></i>
+                </div>
+                <div class="info">
+                    <h3>دعم فنى
+                    </h3>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-marker "></i>
+                </div>
+                <div class="info">
+                    <h3>تصميم جرافيك
+                    </h3>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-sharp fa-solid fa-desktop "></i>
+                </div>
+                <div class="info">
+                    <h3>تصميم موقع الانترنت
+                    </h3>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-computer "></i>
+                </div>
+                <div class="info">
+                    <h3>صيانة كمبيوتر
+                    </h3>
+                </div>
+
+            </div>
+
+    </section>
+    <!-- وظائف حسب المجال -->
+
+
+
+
+    <!--كروت المحافظات-->
+    <section class="Provinces" id="وظائف حسب المحافظات">
+        <h2 class="title">وظائف حسب المحافظات</h2>
+        <p class="para">هنا تقدر تدور على أحدث الوظائف المرتبطة بمحافظتك</p>
+        <div class="content">
+            <div class="Provinces-card">
+                <div class="text">
+                    <strong>القاهره</strong>
+                </div>
+            </div>
+            <div class="Provinces-card">
+                <div class="text">
+                    <strong>الأسكندرية</strong>
+                </div>
+            </div>
+            <div class="Provinces-card">
+                <div class="text">
+                    <strong> أسوان</strong>
+                </div>
+            </div>
+            <div class="Provinces-card">
+                <div class="text">
+                    <strong>أسيوط</strong>
+                </div>
+            </div>
+            <div class="Provinces-card">
+                <div class="text">
+                    <strong>الأقصر</strong>
+                </div>
+            </div>
+            <div class="Provinces-card">
+                <div class="text">
+                    <strong>البحر الأحمر</strong>
+                </div>
+            </div>
+            <div class="Provinces-card">
+                <div class="text">
+                    <strong>البحيرة</strong>
+                </div>
+            </div>
+            <div class="Provinces-card">
+                <div class="text">
+                    <strong>بني سويف</strong>
+                </div>
+            </div>
+            <div class="Provinces-card">
+                <div class="text">
+                    <strong>بورسعيد</strong>
+                </div>
+            </div>
+            <div class="Provinces-card">
+                <div class="text">
+                    <strong>جنوب سيناء</strong>
+                </div>
+            </div>
+            <div class="Provinces-card">
+                <div class="text">
+                    <strong>شمال سيناء</strong>
+                </div>
+            </div>
+            <div class="Provinces-card">
+                <div class="text">
+                    <strong>الجيزة</strong>
+                </div>
+            </div>
+            <div class="Provinces-card">
+                <div class="text">
+                    <strong>الدقهلية</strong>
+                </div>
+            </div>
+            <div class="Provinces-card">
+                <div class="text">
+                    <strong>دمياط</strong>
+                </div>
+            </div>
+            <div class="Provinces-card">
+                <div class="text">
+                    <strong>سوهاج</strong>
+                </div>
+            </div>
+            <div class="Provinces-card">
+                <div class="text">
+                    <strong>السويس</strong>
+                </div>
+            </div>
+            <div class="Provinces-card">
+                <div class="text">
+                    <strong>الشرقية</strong>
+                </div>
+            </div>
+            <div class="Provinces-card">
+                <div class="text">
+                    <strong>الغربية</strong>
+                </div>
+            </div>
+            <div class="Provinces-card">
+                <div class="text">
+                    <strong>الفيوم</strong>
+                </div>
+            </div>
+            <div class="Provinces-card">
+                <div class="text">
+                    <strong>القليوبية</strong>
+                </div>
+            </div>
+            <div class="Provinces-card">
+                <div class="text">
+                    <strong>قنا</strong>
+                </div>
+            </div>
+            <div class="Provinces-card">
+                <div class="text">
+                    <strong>كفر الشيخ</strong>
+                </div>
+            </div>
+            <div class="Provinces-card">
+                <div class="text">
+                    <strong>مطروح</strong>
+                </div>
+            </div>
+            <div class="Provinces-card">
+                <div class="text">
+                    <strong>المنوفية</strong>
+                </div>
+            </div>
+            <div class="Provinces-card">
+                <div class="text">
+                    <strong>المنيا</strong>
+                </div>
+            </div>
+            <div class="Provinces-card">
+                <div class="text">
+                    <strong>الوادي الجديد</strong>
+                </div>
+            </div>
+            <div class="Provinces-card">
+                <div class="text">
+                    <strong>الإسماعيلية</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /كروت المحافظات-->
+
+
+
+    <!-- تواصل معنا -->
+    <section class="contact-us">
+        <h2 class="title">تواصل معنا</h2>
+        <form id="contact-form" onsubmit="sendEmail(); reset(); return false;">
+            <div class="form-group">
+                <label for="name">الاسم<span class="required">*</span></label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="ادخل اسمك" required>
+            </div>
+            <div class="form-group">
+                <label for="email">البريد الإلكتروني<span class="required">*</span></label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="ادخل بريدك الإلكتروني"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="message">الرسالة<span class="required">*</span></label>
+                <textarea class="form-control" id="message" name="message" rows="5" placeholder="اكتب رسالتك هنا"
+                    required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">إرسال</button>
+        </form>
+    </section>
+    <!-- /تواصل معنا -->
+
+
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+
+        <ul class="social-icon">
+            <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        </ul>
+        <div class="logo">
+            <img src="img/ash-2.png" class="logo">
+        </div>
+        <ul class="menu">
+            <li><a href="#">وظائف حسب المحافظات</a></li>
+            <li><a href="#">وظائف حسب المجال</a></li>
+            <li><a href="#" onclick="location.href='job-search.html'">اكتشف الوظائف</a></li>
+            <li><a href="#">الرئيسيه</a></li>
+        </ul>
+        <p>جميع الحقوق محفوظة لشركة اشتغل 2023</p>
+    </footer>
+    <!-- /الفوتر -->
+
+
+
+    <script src="script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+
+    <script>
+
+        // profile
+        let subMenu = document.getElementById("subMenu");
+
+        function toggleMenu() {
+            subMenu.classList.toggle("open-menu");
+        }
+        // profile
+
+
+        // responsive nav menu toggle
+        const menuBtn = document.querySelector(".fa-bars");
+        const closeBtn = document.querySelector(".fa-xmark");
+        const navigation = document.querySelector("nav");
+
+        menuBtn.addEventListener("click", () => {
+            navigation.classList.add("active");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            navigation.classList.remove("active");
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>

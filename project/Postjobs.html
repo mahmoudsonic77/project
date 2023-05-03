@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <title>نموذج نشر الوظائف</title>
+  <link rel="stylesheet" href="Post jobs.css">
+</head>
+
+<body>
+  <div class="form-container">
+    <img onclick="location.href='index.html'" src="img/ash-1.png" class="logo">
+    <h1>اعثر على أفضل المواهب </h1>
+
+    <form action="inser.php" method="post">
+
+      <div class="form-group">
+        <label for="photo">صورة اللوجو :</label>
+        <div class="wrapper">
+          <div class="image-container">
+            <i class="fa fa-user"></i>
+            <img src="">
+          </div>
+          <label for="img_input" class="camera-icon">
+            <i class="fas fa-camera"></i>
+          </label>
+          <input type="file" id="img_input" accept="image/*" hidden>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="Job title">المسمى الوظيفي :</label>
+        <input type="text" id="Job title" name="jobtitle" required>
+      </div>
+      <div class="form-group">
+        <label for="Company Name">اسم الشركة :</label>
+        <input type="text" id="Company Name" name="companyname" required>
+      </div>
+      <!-- <div class="form-group">
+        <label for="Workplace type">نوع محل العمل:</label>
+        <select id="Workplace type" name="Workplacetype">
+          <option value="On-site">الدوام من مقر الشركة</option>
+          <option value="Hybrid">دوام جزئي من مقر الشركة</option>
+          <option value="Remote">عمل عن بعد</option>
+        </select>
+      </div> -->
+      <div class="form-group">
+        <label for="job type">نوع الوظيفة:</label>
+        <select id="job type" name="jobtype">
+          <option value="full-time">دوام كامل</option>
+          <option value="part-time">دوام جزئي</option>
+          <option value="contract">عقد</option>
+          <option value="temporary">مؤقت</option>
+          <option value="other">غير ذلك</option>
+          <option value="volunteer">متطوع</option>
+          <option value="internship">فترة تدريب</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="governorate">الموقع الجغرافي للوظيفة:</label>
+        <select id="governorate" name="governorate">
+          <option value="">اختر موقع العمل</option>
+          <option value="cairo">القاهرة</option>
+          <option value="alexandria">الإسكندرية</option>
+          <option value="giza">الجيزة</option>
+          <option value="aswan">أسوان</option>
+          <option value="asyut">أسيوط</option>
+          <option value="beheira">البحيرة</option>
+          <option value="beniSuef">بني سويف</option>
+          <option value="dakahlia">الدقهلية</option>
+          <option value="damietta">دمياط</option>
+          <option value="faiyum">الفيوم</option>
+          <option value="gharbia">الغربية</option>
+          <option value="ismailia">الإسماعيلية</option>
+          <option value="kafr-el-sheikh">كفر الشيخ</option>
+          <option value="luxor">الأقصر</option>
+          <option value="matrouh">مطروح</option>
+          <option value="minya">المنيا</option>
+          <option value="monufia">المنوفية</option>
+          <option value="new-valley">الوادي الجديد</option>
+          <option value="north-sinai">شمال سيناء</option>
+          <option value="port-said">بورسعيد</option>
+          <option value="qalyubia">القليوبية</option>
+          <option value="qena">قنا</option>
+          <option value="red-sea">البحر الأحمر</option>
+          <option value="sharqia">الشرقية</option>
+          <option value="sohag">سوهاج</option>
+          <option value="south-sinai">جنوب سيناء</option>
+          <option value="suez">السويس</option>
+          <!-- قائمة الخيارات الخاصة بالمحافظات الأخرى -->
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="gender">الجنس :</label>
+        <select id="gender" name="gender" required>
+          <option value="">-- اختر الجنس --</option>
+          <option value="ذكر">ذكر</option>
+          <option value="أنثى">أنثى</option>
+          <option value="أنثى">ذكر/أنثى</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="job description">تفاصيل الوظيفة :</label>
+        <input type="text" id="job description" name="jobdescription" required>
+      </div>
+      <div class="form-group">
+        <label for="job description">سنوات الخبرة:</label>
+        <input type="text" id="job description" name="exp" required>
+      </div>
+      <div class="form-group">
+        <label for="job description">المميزات :</label>
+        <input type="text" id="job description" name="adv" required>
+      </div>
+      <div class="form-group">
+        <label for="job description">الراتب:</label>
+        <input type="text" id="job description" name="salary" required>
+      </div>
+      <button type="submit" name="submit">نشر الوظيفة</button>
+    </form>
+  </div>
+
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+
+  <script>
+       /***********************رفع الصوره الشخصيه***************************/
+       img_input = document.querySelector("#img_input");
+    img_input.onchange = function (e) {
+      if (e.target.files.length > 0) {
+        src = URL.createObjectURL(e.target.files[0]);
+        image = document.querySelector(".image-container img");
+        image.src = src;
+      }
+    }
+    /***********************رفع الصوره الشخصيه***************************/
+  </script>
+  
+</body>
+
+</html>

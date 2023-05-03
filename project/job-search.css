@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* تغيير الألوان والخطوط */
+@font-face {
+    font-family: 'Cairo';
+    src: url('path/to/font/Cairo-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #f2f2f2;
+    direction: rtl;
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* إضافة مؤثرات حركية */
+button[type="submit"] {
+    transition: all 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* تحسين تصميم النموذج */
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    font-size: 20px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* تصميم الكروت */
+.card-container {
+    max-width: 800px;
+    margin: 20px auto;
+
+}
+
+
+.job-card {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.job-card:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.job-card h3 {
+    margin: 0;
+}
+
+.job-card p {
+    margin: 0 0 10px 10px;
+
+}
+
+.job-card img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.job-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.job-location,
+.years-of-experience,
+.gender-required,
+.job-type,
+.salary {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.job-location .label,
+.years-of-experience .label,
+.gender-required .label,
+.job-type .label,
+.salary .label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.job-location .value,
+.years-of-experience .value,
+.gender-required .value,
+.job-type .value,
+.salary .value {
+    font-weight: normal;
+}
+
+.job-features {
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.job-features .label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.label{
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+
+.job-features ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+}
+
+.job-features li {
+    margin: 0 0 10px 10px;
+
+}
+
+
+    /********************زر Read More***********************/
+.read-more-button {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 5px 5px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.read-more-button:hover {
+    transform: scale(1.1);
+}
+
+
+
+p:not(.show-more) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+p.show-more {
+    overflow: visible;
+    text-overflow: inherit;
+    -webkit-line-clamp: initial;
+}
+    /********************زر Read More***********************/
+
+.apply-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: auto;
+    float: left;
+    transition: all 0.3s ease-in-out
+}
+
+.apply-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
